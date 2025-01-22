@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Navbar from "./components/Navbar"; // Ensure this is imported
+import Navbar from "./components/Navbar"; // Ensure this is imported
 import GameList from "./components/GameList"; // Ensure this is imported
 import UserList from "./components/UserList"; // Ensure this is imported
 import Login from "./components/Login"; // Ensure this is imported
@@ -28,7 +28,7 @@ const App = () => {
       <div>
         {token ? (
           <>
-            {/*<Navbar handleLogout={handleLogout} /> {/* Include Navbar for navigation */}
+            <Navbar handleLogout={handleLogout} /> 
             <Routes>
               <Route path="/" element={<Dashboard handleLogout={handleLogout} />} />
               <Route path="/games" element={<GameList handleLogout={handleLogout} />} />
